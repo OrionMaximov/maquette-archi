@@ -1,0 +1,177 @@
+@font-face {
+    font-family: "sego";
+    src: url("../font/SEGOEUI.TTF");
+}
+*{
+    font-family:"sego",Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+body,ul,li,h1,h2,h3,h4,p,form,input,figure,figcaption{
+    margin: 0;
+    padding: 0;
+}
+#menu{
+    display: none;
+}
+#headerImg{
+    position: relative;
+    height: 30vh;
+    overflow: hidden;
+    /*border: red 1px solid;*/
+}
+#headerImg>img{
+    width: 100%;
+}
+h1{
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%,-40%);
+}
+.badge{
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0.3rem 0.5rem;
+    color: rgba(255, 255, 255,0.8)
+}
+.hide{
+    display: none;
+}
+/*project*/
+#projects{
+    width: 90%;
+    margin: 3rem auto;
+}
+#projects>h2{
+    margin-bottom:2rem;
+}
+figure>img{
+    width: 100%;
+    transition: all 0.4s;
+}
+figure>img:hover{
+    transform: scale(1.3);
+}
+figure{
+    margin: 0.5rem 0;
+    position: relative;
+    overflow: hidden;
+}
+figcaption{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 1);
+    color: rgba(255, 255, 255,0.8);
+    padding: 0.3rem 1rem;
+    z-index: 1;
+}
+/*section about*/
+#about{
+    width: 90%;
+    margin: 3rem auto;
+}
+.card>img{
+    width: 100%;
+    margin: 1.5rem auto;
+}
+.card h3,.card h4,.card p{
+    margin:1rem 0;
+}
+.card button{
+    width: 100%;
+    border: none;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+}
+#about h2{
+    margin: 1.5em 0;
+}
+#contact{
+    width: 90%;
+    margin:1.5rem auto;
+}
+#contact h3{
+    margin: 1rem;
+    border-bottom: 0.01rem black solid;
+    padding-bottom: 0.5rem;
+}
+#contact p{
+    padding-bottom: 0.5rem;
+    margin: 1rem;
+}
+input{
+    width: 90%;
+    padding: 0.5rem;
+    margin: 0.5rem 1rem;
+}
+#send{  
+    border: none;
+    width: fit-content;
+    background-color: rgb(0, 0, 0);
+    color:rgba(255, 255, 255,0.8)
+}
+/*carte*/
+#map img{
+    width: 100%;
+    vertical-align: bottom;
+}
+#map{
+    width: 90%;
+    margin: 1rem auto 0 auto;
+    position: relative;
+    left:-100%;
+    opacity: 0;
+    transition: all 2s;
+}
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    height: 10vh;
+    background-color: #000;
+    margin-top: .7rem;
+}
+/*tablette responsive*/
+@media screen and (min-width:576px) {
+    nav{
+        height: 3rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        margin: 0 auto;
+    }
+    #menu{
+        display: flex;
+       list-style-type: none;
+    }
+    #menu a{
+        padding-left: 1rem;
+        color:black ;
+        text-decoration: none;
+    }
+    #headerImg{
+        height: 30vh;
+    }
+    .hide{
+        display: inline;
+    }
+    #diaporama,#team{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    figure,.card{
+        width: 48.5%;
+    }
+}
+@media screen and (min-width:992px) {
+    figure,.card{
+        width: 24.5%;
+    }
+    #headerImg{
+        height: 70vh;
+    }
+    
+}
